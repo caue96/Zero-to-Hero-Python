@@ -2,5 +2,6 @@
     "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "autopep8",
+    "python.envFile": "${workspaceRoot}/.env"
 }

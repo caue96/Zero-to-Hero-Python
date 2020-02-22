@@ -1,0 +1,4 @@
+# Jogos
+jogos/.vscode/
+jogos/__pycache__/
+.env
