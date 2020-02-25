@@ -1,0 +1,8 @@
+# Jogos
+jogos/.vscode/
+jogos/__pycache__/
+jogos/requirements.txt
+jogos/.pylintrc
+
+# Repository files
+.env
