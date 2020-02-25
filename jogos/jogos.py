@@ -1,14 +1,19 @@
 import forca
 import adivinhacao
 
-def menu():
+
+def esolher_jogo():
     print("*********************************")
     print("*******Escolha o seu jogo!*******")
     print("*********************************")
 
     print("(1) Forca (2) Adivinhação")
 
-    jogo = int(input("Qual jogo?"))
+    return int(input("Qual jogo?"))
+
+
+def menu():
+    jogo = esolher_jogo()
 
     if (jogo == 1):
         print("Jogando Forca...")
@@ -18,6 +23,7 @@ def menu():
         adivinhacao.jogar()
 
     print("Fim do jogo")
+
 
 if (__name__ == "__main__"):
     menu()
