@@ -31,4 +31,4 @@ jobs:
       run: |
         pip3 install pytest
         pip3 install pytest-cov
-        pytest jogos.testes.py --cov-report html:cov_html
+        pytest jogos/testes.py --cov-report html:cov_html
