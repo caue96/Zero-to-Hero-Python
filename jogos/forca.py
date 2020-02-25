@@ -134,6 +134,7 @@ def jogar():
     palavra_secreta = carregar_palavra()
 
     letras_acertadas = inicializar_palavra(palavra_secreta)
+    
     print(letras_acertadas)
 
     enforcou = False
