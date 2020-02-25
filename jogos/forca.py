@@ -37,7 +37,7 @@ def pede_chute():
 def chute_correto(chute, letras_acertadas, palavra_secreta):
     index = 0
     for letra in palavra_secreta:
-        if (chute == letra):
+        if chute == letra:
             letras_acertadas[index] = letra
         index += 1
 
@@ -46,43 +46,43 @@ def desenha_forca(erros):
     print("  _______     ")
     print(" |/      |    ")
 
-    if(erros == 1):
+    if erros == 1:
         print(" |      (_)   ")
         print(" |            ")
         print(" |            ")
         print(" |            ")
 
-    if(erros == 2):
+    if erros == 2:
         print(" |      (_)   ")
         print(" |      \     ")
         print(" |            ")
         print(" |            ")
 
-    if(erros == 3):
+    if erros == 3:
         print(" |      (_)   ")
         print(" |      \|    ")
         print(" |            ")
         print(" |            ")
 
-    if(erros == 4):
+    if erros == 4:
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |            ")
         print(" |            ")
 
-    if(erros == 5):
+    if erros == 5:
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |       |    ")
         print(" |            ")
 
-    if(erros == 6):
+    if erros == 6:
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |       |    ")
         print(" |      /     ")
 
-    if (erros == 7):
+    if erros == 7:
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |       |    ")
@@ -134,7 +134,7 @@ def jogar():
     palavra_secreta = carregar_palavra()
 
     letras_acertadas = inicializar_palavra(palavra_secreta)
-    
+
     print(letras_acertadas)
 
     enforcou = False
@@ -143,8 +143,8 @@ def jogar():
 
     while(not enforcou and not acertou):
         chute = pede_chute()
-        
-        if (chute in palavra_secreta):
+
+        if chute in palavra_secreta:
             chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
             erros += 1
@@ -154,11 +154,11 @@ def jogar():
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
 
-    if (acertou):
+    if acertou:
         mensagem_ganhador()
     else:
-        mensagem_perdedor()
+        mensagem_perdedor(palavra_secreta)
 
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     jogar()

@@ -22,12 +22,12 @@ def adivinhar_numero(rodada, total_tentativas):
     return int(chute_str)
 
 
-def erro_chute(chute):  
+def erro_chute(chute):
     while (chute < 1 or chute > 100):
         print("Você deve digitar um número entre 1 e 100!")
         chute_str = input("Digite um número entre 1 e 100: ")
         print("Você digitou ", chute_str)
-        
+
         chute = int(chute_str)
 
         continue
@@ -42,9 +42,9 @@ def jogar():
 
     nivel = escolher_nivel()
 
-    if (nivel == 1):
+    if nivel == 1:
         total_tentativas = 20
-    elif (nivel == 2):
+    elif nivel == 2:
         total_tentativas = 10
     else:
         total_tentativas = 5
@@ -58,17 +58,17 @@ def jogar():
         maior = chute > numero_secreto
         menor = chute < numero_secreto
 
-        if (acertou):
+        if acertou:
             print(f"Você acertou e fez {pontos} pontos!")
             break
         else:
-            if (maior):
+            if maior:
                 print("Você errou! O seu chute foi maior do que o número secreto.")
-            elif (menor):
+            elif menor:
                 print("Você errou! O seu chute foi menor do que o número secreto.")
             pontos_perdidos = abs(numero_secreto - chute)
             pontos -= pontos_perdidos
 
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     jogar()
