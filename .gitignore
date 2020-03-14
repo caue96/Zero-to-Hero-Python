@@ -1,8 +1,16 @@
 # Jogos
-jogos/.vscode/
 jogos/__pycache__/
-jogos/requirements.txt
+jogos/.pytest_cache/
+jogos/.vscode/
 jogos/.pylintrc
+jogos/requirements.txt
+
+# OO
+oo/__pycache__/
+oo/.pytest_cache/
+oo/.vscode/
+oo/.pylintrc
+oo/requirements.txt
 
 # Repository files
 .env
